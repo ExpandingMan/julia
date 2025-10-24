@@ -123,6 +123,7 @@ _completion_text(c::MethodCompletion) = repr(c.method)
 _completion_text(c::ShellCompletion) = c.text
 _completion_text(c::DictCompletion) = c.key
 _completion_text(c::KeywordArgumentCompletion) = c.kwarg*'='
+_completion_text(c::BslashCompletion) = c.completion
 
 completion_text(c) = _completion_text(c)::String
 
